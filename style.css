@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    
+    /*background: linear-gradient(330deg, white 60%, rgb(249, 243, 253));*/
+    /*background: linear-gradient(330deg, white 60%, rgb(245, 231, 255));*/
+    background: linear-gradient(330deg, white 60%, rgb(251, 245, 254));
+    min-height: 100vh;
+    overflow: hidden;
+}
+.logo{
+    padding-top: 50px;
+    padding-left: 150px;
+    float: left;
+}
+.logo img{
+    width: 250px;
+}
+.ellipse{
+    float: right;
+}
+.ellipse img{
+    width: 500px;
+}
+.left{
+    width: 450px;
+    position: absolute;
+    margin-top: 100px;
+}
+.left img{
+    width: 71.1%;
+    height: auto;
+    margin-top: 180px;
+    margin-left: 120px;
+    z-index: 3;
+    position: absolute;
+}
+.right {
+    float: right;
+    position: absolute;
+    margin-top: 180px;
+    margin-left: 900px;
+}
+.content h1{
+    color: rgba(4, 43, 87, 1);
+    font-family: 'Roboto', sans-serif;
+}
+.content p{
+    color: rgb(109, 131, 160);
+    font-family: 'Roboto', sans-serif;
+}
+.buttons button{
+    display: block;
+    margin-bottom: 30px;
+    width: 460px;
+    height: 50px;
+    border-radius: 7px;
+    border: 0.5px solid rgb(228, 232, 236);
+    background-color: white;
+    cursor: pointer;
+    box-shadow: 0px 1px 2px rgb(185, 185, 185);
+}
+.buttons button:hover{
+    border: 0.5px solid rgb(136, 52, 243);
+}
+.buttons button img{
+    float: right;
+    width: 35px;
+    margin-right: 10px; 
+}
+.buttons button p{
+    float: left;
+    margin-left: 50px;
+    font-size: 16px;
+    color: rgb(38, 69, 112);
+    font-weight: bold;
+    margin-top: 2px;
+}
+.contacts{
+  margin-left: 140px;
+  margin-top: 60px;
+  
+}
+.contacts img{
+    width: 30px;
+    height: 30px;
+    margin-right: 25px;
+    cursor: pointer;
+    transition: transform .5s;
+}
+.contacts img:hover{
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+.rectangle{
+    height: 172px;
+    width: 100%;
+    margin-top: 700px;
+    position: absolute;
+    background: linear-gradient(106.58deg, #C258F8 1.66%, #981FFC 88.43%);
+    z-index: 1;
+    bottom: 0;
+}
+.shadow{
+    border-radius: 50%;
+    width: 290px;
+    height: 32px;
+    background-color: rgba(0, 0, 0, 0.534);
+    z-index: 2;
+    position: absolute;
+    margin-left: 160px;
+    margin-top: 20px;
+    filter: blur(10px);
+}
+.floating{
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+@keyframes floating{
+    0%{transform: translate(0, 0px);}
+    50%{transform: translate(0, 15px);}
+    100%{transform: translate(0, -0px);}
+}
+.rectangle img{
+    width: 140px;
+    float: right;
+    margin-right: 150px;
+    margin-top: 80px;
+    overflow: hidden;
+    animation: floating 3s ease-in-out infinite
+}
+.rectangle p{
+    color: rgba(244, 226, 255, 1);
+    text-align: center;
+    margin-top: 130px;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 200px;
+    font-size: 16px;
+}
