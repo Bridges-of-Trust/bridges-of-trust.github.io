@@ -4,45 +4,59 @@
     box-sizing: border-box;
 }
 body{
-    
-    /*background: linear-gradient(330deg, white 60%, rgb(249, 243, 253));*/
-    /*background: linear-gradient(330deg, white 60%, rgb(245, 231, 255));*/
-    background: linear-gradient(330deg, white 60%, rgb(251, 245, 254));
+    background: white;
     min-height: 100vh;
-    overflow: hidden;
+}
+.page{
+    display: flex;
+    flex-direction: column;
+}
+.container{
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
 }
 .logo{
-    padding-top: 50px;
-    padding-left: 150px;
+    padding-top: 40px;
     float: left;
+    left: 0px;
 }
 .logo img{
     width: 250px;
+
 }
-.ellipse{
-    float: right;
+.ellipse-1{
+    right: 0;
+    position: absolute;
+    z-index: -1;
 }
-.ellipse img{
+.ellipse-1 img{
+    z-index: -1;
     width: 500px;
 }
-.left{
+.ellipse-2{
+    position: absolute;
+    z-index: -1;
+}
+.ellipse-2 img{
+    width: 500px;
+}
+.photo{
     width: 450px;
     position: absolute;
-    margin-top: 100px;
+    top: -420px;
 }
-.left img{
+.photo img{
     width: 71.1%;
     height: auto;
-    margin-top: 180px;
     margin-left: 120px;
     z-index: 3;
     position: absolute;
 }
-.right {
-    float: right;
-    position: absolute;
-    margin-top: 180px;
-    margin-left: 900px;
+.content{
+    z-index: 1;
+    padding-top: 180px;
 }
 .content h1{
     color: rgba(4, 43, 87, 1);
@@ -55,7 +69,8 @@ body{
 .buttons button{
     display: block;
     margin-bottom: 30px;
-    width: 460px;
+    /*width: 460px;*/
+    width: 100%;
     height: 50px;
     border-radius: 7px;
     border: 0.5px solid rgb(228, 232, 236);
@@ -80,9 +95,8 @@ body{
     margin-top: 2px;
 }
 .contacts{
-  margin-left: 140px;
-  margin-top: 60px;
-  
+    margin-left: 100px;
+    margin-top: 55px;
 }
 .contacts img{
     width: 30px;
@@ -97,19 +111,18 @@ body{
     transform: scale(1.2);
 }
 .rectangle{
-    height: 172px;
+    position: relative;
+    height: 220px;
     width: 100%;
-    margin-top: 700px;
-    position: absolute;
+    margin-top: 55px;
     background: linear-gradient(106.58deg, #C258F8 1.66%, #981FFC 88.43%);
     z-index: 1;
-    bottom: 0;
 }
 .shadow{
     border-radius: 50%;
     width: 290px;
     height: 32px;
-    background-color: rgba(0, 0, 0, 0.534);
+    background-color: rgba(0, 0, 0, 0.349);
     z-index: 2;
     position: absolute;
     margin-left: 160px;
@@ -129,19 +142,69 @@ body{
     50%{transform: translate(0, 15px);}
     100%{transform: translate(0, -0px);}
 }
-.rectangle img{
+.rectangle .figure-floating{
     width: 140px;
     float: right;
-    margin-right: 150px;
+    margin-right: 130px;
     margin-top: 80px;
     overflow: hidden;
-    animation: floating 3s ease-in-out infinite
+    animation: floating 3s ease-in-out infinite;
 }
 .rectangle p{
     color: rgba(244, 226, 255, 1);
     text-align: center;
-    margin-top: 130px;
+    padding-top: 140px;
     font-family: 'Roboto', sans-serif;
     margin-left: 200px;
     font-size: 16px;
+}
+@media (max-width: 1024px){
+    .logo{
+        margin: 0 auto;
+        position: absolute;
+        top: 0;
+        left: auto;
+        padding-left: 60px;
+    }
+    .rectangle{
+        margin-top: 702px;
+    }
+    .rectangle p {
+        display: none;
+    }
+    .rectangle .figure-floating{
+        margin-right: 10px;
+    }
+    .page {
+        flex-direction: column-reverse;
+    }
+    .container{
+        display: block;
+        width: auto;
+    }
+    .contacts{
+        margin-bottom: 55px;
+    }
+} 
+@media only screen and (max-width: 1000px){
+    body{
+        overflow-y: visible;
+    }
+    .ellipse-1 img{
+        width: 350px;
+    }
+    .ellipse-2 img{
+        width: 350px;
+    }
+}
+@media only screen and (max-width: 700px){
+    body{
+        overflow-y: visible;
+    }
+    .ellipse-1 img{
+        width: 180px;
+    }
+    .ellipse-2 img{
+        width: 180px;
+    }
 }
