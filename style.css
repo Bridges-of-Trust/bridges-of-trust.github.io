@@ -24,7 +24,6 @@ body{
 }
 .logo img{
     width: 250px;
-
 }
 .ellipse-1{
     right: 0;
@@ -61,12 +60,12 @@ body{
 .content h1{
     color: rgba(4, 43, 87, 1);
     font-family: 'Roboto', sans-serif;
-    }
-    .content p{
+}
+.content p{
     color: rgb(109, 131, 160);
     font-family: 'Roboto', sans-serif;
-    }
-    .buttons button{
+}
+.buttons button{
     display: block;
     margin-bottom: 30px;
     /*width: 460px;*/
@@ -77,16 +76,16 @@ body{
     background-color: white;
     cursor: pointer;
     box-shadow: 0px 1px 2px rgb(185, 185, 185);
-    }
-    .buttons button:hover{
+}
+.buttons button:hover{
     border: 0.5px solid rgb(136, 52, 243);
-    }
-    .buttons button img{
+}
+.buttons button img{
     float: right;
     width: 35px;
     margin-right: 10px; 
-    }
-    .buttons button p{
+}
+.buttons button p{
     float: left;
     margin-left: 50px;
     font-size: 16px;
@@ -95,7 +94,7 @@ body{
     margin-top: 2px;
 }
 .contacts{
-    margin-left: 100px;
+    text-align: center;
     margin-top: 55px;
 }
 .contacts img{
@@ -104,8 +103,8 @@ body{
     margin-right: 25px;
     cursor: pointer;
     transition: transform .5s;
-    }
-    .contacts img:hover{
+}
+.contacts img:hover{
     -ms-transform: scale(1.2);
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
@@ -128,24 +127,24 @@ body{
     margin-left: 160px;
     margin-top: 20px;
     filter: blur(10px);
-    }
-    .floating{
+}
+.floating{
     animation-name: floating;
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
     margin-left: 30px;
     margin-top: 5px;
-    }
-    @keyframes floating{
+}
+@keyframes floating{
     0%{transform: translate(0, 0px);}
     50%{transform: translate(0, 15px);}
     100%{transform: translate(0, -0px);}
 }
 .rectangle .figure-floating{
-    width: 140px;
+    /*width: 140px;*/
+    width: 250px;
     float: right;
-    margin-right: 130px;
     margin-top: 80px;
     overflow: hidden;
     animation: floating 3s ease-in-out infinite;
@@ -160,20 +159,32 @@ body{
 }
 @media (max-width: 1024px){
     .logo{
-        margin: 0 auto;
         position: absolute;
         top: 0;
-        left: auto;
-        padding-left: 60px;
+        margin-right: auto;
+        right: 0;
+        left: 0;
+        text-align: center;
+    }
+    .photo {
+        margin-right: auto;
+        right: 0;
+        left: 0;
+        text-align: center;
+    }
+    .shadow{
+        margin-left: auto;
+        margin-right: auto;
+        right: 0;
+        left: 0;
+        text-align: center;
     }
     .rectangle{
-        margin-top: 702px;
+        margin-top: 602px;
+        height: 133px;
     }
     .rectangle p {
         display: none;
-    }
-    .rectangle .figure-floating{
-        margin-right: 10px;
     }
     .page {
         flex-direction: column-reverse;
@@ -184,6 +195,9 @@ body{
     }
     .contacts{
         margin-bottom: 55px;
+    }
+    .content{
+        padding-top: 80px;
     }
 } 
 @media only screen and (max-width: 1000px){
@@ -196,6 +210,32 @@ body{
     .ellipse-2 img{
         width: 350px;
     }
+    .photo {
+        margin-left: auto;
+        margin-right: auto;
+        right: 0;
+        left: 0;
+        text-align: center;
+        width: 400px;
+        top: -355px;
+    }
+    .photo img{
+        margin-left: auto;
+        margin-right: auto;
+        right: 0;
+        left: 0;
+        text-align: center;
+    }
+    .shadow{
+        width: 260px;
+        margin-top: 35px;
+    }
+    .rectangle .figure-floating{
+        width: 150px;
+    }
+    .rectangle .figure-floating img{
+        width: 90px;
+    }
 }
 @media only screen and (max-width: 700px){
     body{
@@ -206,5 +246,62 @@ body{
     }
     .ellipse-2 img{
         width: 180px;
+    }
+    .photo{
+        width: 350px;
+        top: -288px;
+    }
+    .photo img{
+        margin-left: auto;
+        margin-right: auto;
+        right: 0;
+        left: 0;
+        text-align: center;
+    }
+    .shadow{
+        width: 230px;
+        margin-top: 50px;
+    }
+    .rectangle{
+        margin-top: 502px;
+        height: 130px;
+    }
+    .rectangle .figure-floating{
+        width: 85px;
+    }
+    .rectangle .figure-floating img{
+        width: 70px;
+    }
+    .content{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .content h1{
+        font-size: 24px;
+    }
+}
+@media only screen and (max-width: 280px){
+    .logo img{
+        width: 200px;
+    }
+    .photo{
+        width: 280px;
+        top: -230px;
+    }
+    .shadow{
+        width: 180px;
+        margin-top: 40px;
+    }
+    .rectangle{
+        margin-top: 350px;
+    }
+    .rectangle .figure-floating{
+        width: 75px;
+    }
+    .rectangle .figure-floating img{
+        width: 60px;
+    }
+    .content h1{
+        font-size: 18px;
     }
 }
