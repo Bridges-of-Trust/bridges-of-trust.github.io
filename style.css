@@ -26,13 +26,13 @@ body{
     width: 250px;
 }
 .ellipse-1{
-    right: 0;
     position: absolute;
+    right: 0;
     z-index: -1;
 }
 .ellipse-1 img{
-    z-index: -1;
     width: 500px;
+    z-index: -1;
 }
 .ellipse-2{
     position: absolute;
@@ -42,16 +42,16 @@ body{
     width: 500px;
 }
 .photo{
-    width: 450px;
     position: absolute;
+    width: 450px;
     top: -420px;
 }
 .photo img{
+    position: absolute;
     width: 71.1%;
     height: auto;
     margin-left: 120px;
     z-index: 3;
-    position: absolute;
 }
 .content{
     z-index: 1;
@@ -68,7 +68,6 @@ body{
 .buttons button{
     display: block;
     margin-bottom: 30px;
-    /*width: 460px;*/
     width: 100%;
     height: 50px;
     border-radius: 7px;
@@ -118,12 +117,12 @@ body{
     z-index: 1;
 }
 .shadow{
+    position: absolute;
     border-radius: 50%;
     width: 290px;
     height: 32px;
     background-color: rgba(0, 0, 0, 0.349);
     z-index: 2;
-    position: absolute;
     margin-left: 160px;
     margin-top: 20px;
     filter: blur(10px);
@@ -142,7 +141,6 @@ body{
     100%{transform: translate(0, -0px);}
 }
 .rectangle .figure-floating{
-    /*width: 140px;*/
     width: 250px;
     float: right;
     margin-top: 80px;
@@ -158,6 +156,16 @@ body{
     font-size: 16px;
 }
 @media (max-width: 1024px){
+    .page {
+        flex-direction: column-reverse;
+    }
+    .container{
+        display: block;
+        width: auto;
+    }
+    .content{
+        padding-top: 80px;
+    }
     .logo{
         position: absolute;
         top: 0;
@@ -172,13 +180,6 @@ body{
         left: 0;
         text-align: center;
     }
-    .shadow{
-        margin-left: auto;
-        margin-right: auto;
-        right: 0;
-        left: 0;
-        text-align: center;
-    }
     .rectangle{
         margin-top: 602px;
         height: 133px;
@@ -186,18 +187,15 @@ body{
     .rectangle p {
         display: none;
     }
-    .page {
-        flex-direction: column-reverse;
-    }
-    .container{
-        display: block;
-        width: auto;
+    .shadow{
+        margin-left: auto;
+        margin-right: auto;
+        right: 0;
+        left: 0;
+        text-align: center;
     }
     .contacts{
         margin-bottom: 55px;
-    }
-    .content{
-        padding-top: 80px;
     }
 } 
 @media only screen and (max-width: 1000px){
@@ -241,6 +239,13 @@ body{
     body{
         overflow-y: visible;
     }
+    .content{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .content h1{
+        font-size: 24px;
+    }
     .ellipse-1 img{
         width: 180px;
     }
@@ -258,10 +263,6 @@ body{
         left: 0;
         text-align: center;
     }
-    .shadow{
-        width: 230px;
-        margin-top: 50px;
-    }
     .rectangle{
         margin-top: 502px;
         height: 130px;
@@ -272,25 +273,21 @@ body{
     .rectangle .figure-floating img{
         width: 70px;
     }
-    .content{
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-    .content h1{
-        font-size: 24px;
+    .shadow{
+        width: 230px;
+        margin-top: 50px;
     }
 }
 @media only screen and (max-width: 280px){
+    .content h1{
+        font-size: 18px;
+    }
     .logo img{
         width: 200px;
     }
     .photo{
         width: 280px;
         top: -230px;
-    }
-    .shadow{
-        width: 180px;
-        margin-top: 40px;
     }
     .rectangle{
         margin-top: 350px;
@@ -301,7 +298,8 @@ body{
     .rectangle .figure-floating img{
         width: 60px;
     }
-    .content h1{
-        font-size: 18px;
+    .shadow{
+        width: 180px;
+        margin-top: 40px;
     }
 }
